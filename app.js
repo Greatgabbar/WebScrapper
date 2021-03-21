@@ -77,7 +77,7 @@ await page.setViewport({
   height: dimensions.height,
   deviceScaleFactor: dimensions.deviceScaleFactor,
 });
- await page.goto('https://www.youtube.com/',{waitUntil : 'load'});
+ await page.goto('https://www.youtube.com/',{waitUntil : 'networkidle2'});
  await page.pdf({
    path:'hell.pdf',
    format:'A4',
