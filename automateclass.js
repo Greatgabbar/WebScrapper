@@ -175,13 +175,32 @@ const moment = require('moment');
         await dialog.accept();
       });
     await page.setViewport({
-        width: 1920,
-        height: 720,
-        deviceScaleFactor: 1,
+      width: 1720,
+      height: 720,
+      deviceScaleFactor: 0.75
     });
     await page.goto("https://zoom.us");
     await page.click('.signin'); 
     await page.waitForSelector('.login-btn-google');
     await page.click('.login-btn-google');
-    // page.evaluate(() => alert('1'));
+    await page.waitForSelector('.whsOnd.zHQkBf');
+    // await console.log(await page.frames().forEach(dta=>console.log(dta)));
+    await page.click(".whsOnd.zHQkBf");
+    await page.keyboard.type("strivedi_be19@thapar.edu",{delay:100});
+    // await page.waitForSelector('.VfPpkd-Jh9lGc');
+    // await page.click('.VfPpkd-Jh9lGc');
+    await page.keyboard.press('Enter');
+    await page.waitFor(2000);
+    await page.waitForSelector('.whsOnd.zHQkBf');
+    await page.focus('.whsOnd.zHQkBf');
+    await page.keyboard.type("");
+    await page.click('.VfPpkd-Jh9lGc');
+    await page.waitForSelector('#btnJoinMeeting');
+    await page.click('#btnJoinMeeting');
+    await page.waitForSelector('#join-confno');
+    await page.click('#join-confno');
+    await page.keyboard.type('csed8');
+    await page.keyboard.press('Enter');
+    await page.waitForSelector('div[role="button"]');
+    await page.click('div[role="button"]');
     })()
