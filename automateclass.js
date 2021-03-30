@@ -62,7 +62,7 @@ const moment = require('moment');
 //     ],
 //     Wednesday : [
 //         {
-//             time : "2:57:30",
+//             time : "8:50:00",
 //             link : "https://tiet.zoom.us/my/CSED8",
 //             code : "UCS411 L"
 //         },
